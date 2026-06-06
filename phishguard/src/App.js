@@ -31,6 +31,17 @@ export default function App() {
       return;
     }
 
+    try {
+      const urlObj = new URL(trimmedUrl);
+      if (!urlObj.hostname.includes('.') && !urlObj.hostname.includes('localhost')) {
+        setError('Please enter a complete, valid URL with a domain extension (e.g., https://example.com).');
+        return;
+      }
+    } catch (e) {
+      setError('Invalid URL format. Please check your spelling.');
+      return;
+    }
+
     setError('');
     setAnalyzing(true);
     setResult(null);
