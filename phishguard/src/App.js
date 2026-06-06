@@ -151,7 +151,7 @@ export default function App() {
                 onKeyDown={handleKey}
                 placeholder="https://example.com"
                 disabled={analyzing || modelLoading}
-                className="flex-1 bg-transparent font-mono text-sm sm:text-base text-text px-3 py-4 outline-none placeholder-muted disabled:opacity-50"
+                className="flex-1 bg-transparent font-mono text-base text-text px-3 py-4 outline-none placeholder-muted disabled:opacity-50"
               />
               <button
                 onClick={handleAnalyze}
