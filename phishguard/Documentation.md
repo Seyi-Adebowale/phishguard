@@ -1,7 +1,7 @@
-# PhishGuard: AI-Powered Client-Side Phishing Detection
+# PhishSentinel: AI-Powered Client-Side Phishing Detection
 
 ## 1. Introduction & Overview
-PhishGuard is a modern, privacy-preserving web application designed to detect phishing websites in real-time. Unlike traditional anti-phishing tools that rely on backend servers to process data, PhishGuard performs all feature extraction and machine learning inference entirely **client-side** (within the user's browser). This architecture ensures rapid response times and guarantees that the user's browsing data is never transmitted to a centralized processing server.
+PhishSentinel is a modern, privacy-preserving web application designed to detect phishing websites in real-time. Unlike traditional anti-phishing tools that rely on backend servers to process data, PhishSentinel performs all feature extraction and machine learning inference entirely **client-side** (within the user's browser). This architecture ensures rapid response times and guarantees that the user's browsing data is never transmitted to a centralized processing server.
 
 ## 2. Technology Stack
 The project is built on a hybrid stack combining modern web technologies for the frontend and Python for offline model training:
@@ -14,7 +14,7 @@ The project is built on a hybrid stack combining modern web technologies for the
 ## 3. Dataset & Feature Engineering
 The initial dataset was based on standard academic phishing datasets (e.g., the UCI Machine Learning Repository Phishing Website Dataset), which traditionally contain 30 heuristic features. 
 
-However, because PhishGuard is engineered to run client-side, **7 backend-dependent features were explicitly dropped** from the dataset prior to training. Features such as *Domain Age, PageRank, Google Index, Web Traffic, and Statistical Reports* require expensive API calls to third-party SEO and registrar services, which cannot be securely or reliably performed from a browser.
+However, because PhishSentinel is engineered to run client-side, **7 backend-dependent features were explicitly dropped** from the dataset prior to training. Features such as *Domain Age, PageRank, Google Index, Web Traffic, and Statistical Reports* require expensive API calls to third-party SEO and registrar services, which cannot be securely or reliably performed from a browser.
 
 The dataset was thus refined to **23 critical features** that can be extracted instantaneously from the URL string and the webpage's Document Object Model (DOM).
 
@@ -66,7 +66,7 @@ The Random Forest algorithm was specifically chosen over other models (like Neur
 4. **Feature Importance:** During training, `scikit-learn` calculates the "Feature Importance" (Gini importance) of each variable, which is also exported to the JSON file to power the UI's analytics dashboard.
 
 ## 5. System Architecture: How It Works
-When a user interacts with PhishGuard, the following real-time sequence occurs:
+When a user interacts with PhishSentinel, the following real-time sequence occurs:
 
 1. **Input Validation:** The user pastes a URL. The React frontend enforces strict protocol validation, requiring the user to explicitly define `http://` or `https://`.
 2. **Proxy Fetching:** The app sends the URL to `api.allorigins.win`. This CORS proxy fetches the live HTML of the target website and returns it to the browser. Simultaneously, a DNS-over-HTTPS request is dispatched to Google's DNS servers.

@@ -1,5 +1,5 @@
 """
-PhishGuard — Model Training Script
+PhishSentinel — Model Training Script
 ===================================
 Trains a Random Forest classifier on the phishing websites dataset
 and exports the model to JSON for browser-based inference.
@@ -160,7 +160,7 @@ def export_model(rf, feature_cols, accuracy, output_path):
 # ─────────────────────────────────────────────
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Train PhishGuard Random Forest')
+    parser = argparse.ArgumentParser(description='Train PhishSentinel Random Forest')
     parser.add_argument('--data',   default='dataset.csv',        help='Path to dataset CSV')
     parser.add_argument('--output', default='public/model.json',  help='Output JSON path')
     parser.add_argument('--trees',  type=int, default=30,         help='Number of trees')

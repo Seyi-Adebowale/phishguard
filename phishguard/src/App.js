@@ -91,7 +91,7 @@ export default function App() {
             </svg>
           </div>
           <span className="font-display font-bold text-lg tracking-tight text-text">
-            Phish<span className="text-accent">Guard</span>
+            Phish<span className="text-accent">Sentinel</span>
           </span>
         </div>
         <div className="flex items-center gap-4 text-xs font-mono text-muted">
@@ -207,7 +207,7 @@ export default function App() {
       <footer className="border-t border-border px-6 py-6 mt-10">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="font-mono text-xs text-muted">
-            PhishGuard · AI-Powered Threat Detection · Runs 100% in-browser
+            PhishSentinel · AI-Powered Threat Detection · Runs 100% in-browser
           </p>
           <p className="font-mono text-xs text-muted">
             Built with React, Tailwind CSS & Python

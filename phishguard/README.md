@@ -1,4 +1,4 @@
-# PhishGuard — AI-Powered Phishing Website Detector
+# PhishSentinel — AI-Powered Phishing Website Detector
 
 A production-grade phishing detection web app that runs entirely in the browser. No backend required, no data ever sent to a server.
 
@@ -6,7 +6,7 @@ A production-grade phishing detection web app that runs entirely in the browser.
 
 ## Project Overview
 
-PhishGuard uses a **Random Forest classifier** trained on 11,055 real-world URLs to classify websites as phishing or legitimate. The trained model is exported to JSON and loaded at runtime for instant, privacy-first inference.
+PhishSentinel uses a **Random Forest classifier** trained on 11,055 real-world URLs to classify websites as phishing or legitimate. The trained model is exported to JSON and loaded at runtime for instant, privacy-first inference.
 
 ### Results
 
@@ -40,7 +40,7 @@ PhishGuard uses a **Random Forest classifier** trained on 11,055 real-world URLs
 ## Project Structure
 
 ```
-phishguard/
+PhishSentinel/
 ├── public/
 │   ├── index.html          # Entry HTML
 │   └── model.json          # Trained RF model (30 trees, 41KB)
